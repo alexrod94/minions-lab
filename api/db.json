@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "name": "Alex",
+      "occupation": "Teacher",
+      "weapon": "Keyboard",
+      "cartoon": false,
+      "id": "3"
+    },
+    {
+      "id": "95cd",
+      "name": "Pepe",
+      "occupation": "Fontanero",
+      "weapon": "Tubería",
+      "cartoon": "on"
+    },
+    {
+      "id": "8ffa",
+      "name": "Tiger",
+      "occupation": "Perro de Javi",
+      "weapon": "Ladrar",
+      "cartoon": "on"
+    },
+    {
+      "name": "Joaquín",
+      "occupation": "Mago",
+      "weapon": "Chistera",
+      "cartoon": false,
+      "id": "4931"
+    },
+    {
+      "id": "977c",
+      "name": "Eustaquio",
+      "occupation": "Nini",
+      "weapon": "Pereza",
+      "cartoon": false
+    }
+  ]
+}

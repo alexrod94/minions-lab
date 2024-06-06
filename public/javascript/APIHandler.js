@@ -1,25 +1,46 @@
 class APIHandler {
-  constructor (baseUrl) {
+  constructor(baseUrl) {
     this.BASE_URL = baseUrl;
   }
 
-  getFullList () {
-
+  async getFullList() {
+    const res = await fetch("http://localhost:8000/characters");
+    const finalRes = await res.json();
+    return finalRes;
   }
 
-  getOneRegister () {
-
+  async getOneRegister(id) {
+    const res = await fetch(`http://localhost:8000/characters/${id}`);
+    const finalRes = await res.json();
+    return finalRes;
   }
 
-  createOneRegister () {
-
+  async createOneRegister(data) {
+    const res = await fetch("http://localhost:8000/characters", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    return res;
   }
 
-  updateOneRegister () {
-
+  async updateOneRegister(data, id) {
+    const res = await fetch("http://localhost:8000/characters/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    return res;
   }
 
-  deleteOneRegister () {
-
+  async deleteOneRegister(id) {
+    const res = await fetch(`http://localhost:8000/characters/${id}`, {
+      method: "DELETE",
+    });
+    return res;
   }
 }
